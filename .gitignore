@@ -1,1 +1,1 @@
-!(*.png|tex|pdf|bib])
+!(*.png|*.tex|*.pdf|*.bib|*.sh)
