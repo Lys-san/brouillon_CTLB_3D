@@ -1,0 +1,320 @@
+ \documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{subcaption}
+\usepackage[normalem]{ulem}
+\usepackage[framemethod=TikZ]{mdframed}
+\newcounter{mydef}[section]\setcounter{mydef}{0}
+\renewcommand{\themydef}{\arabic{section}.\arabic{mydef}}
+
+\newenvironment{definition}[2][]{%
+    \refstepcounter{mydef}
+ 
+    \ifstrempty{#1}%
+    % if condition (without title)
+    {\mdfsetup{%
+        frametitle={%
+            \tikz[baseline=(current bounding box.east),outer sep=0pt]
+            \node[anchor=east,rectangle,fill=gray!20,rounded corners=3pt]
+            {\strut Definition~\themydef};}
+        }%
+    % else condition (with title)
+    }{\mdfsetup{%
+        frametitle={%
+            \tikz[baseline=(current bounding box.east),outer sep=0pt]
+            \node[anchor=east,rectangle,fill=gray!20,rounded corners=3pt]
+            {\strut Definition~\themydef:~#1};}%,
+        }%
+    }%
+    % Both conditions
+    \mdfsetup{%
+        innertopmargin=10pt,linecolor=gray!20,%
+        linewidth=2pt,topline=true,%
+        frametitleaboveskip=\dimexpr-\ht\strutbox\relax,%
+        roundcorner=5pt,
+        nobreak=true
+    }
+\begin{mdframed}[]\relax}{%
+\end{mdframed}}
+
+
+
+\title{}
+\author{Lysandre Macke}
+
+\begin{document}
+% \maketitle
+
+\section{Definition}
+
+\subsection{Rappel}
+
+Dans un premier lieu, il est important de rappeler la notion de courbe $(\theta, \delta)$-CTLB.\\
+
+\begin{definition}[Courbe $(\theta, \delta)$-CTLB]{}
+Une courbe de Jordan $\mathcal{C}$ est dite $(\theta, \delta)$-CTLB si pour toute paire de point $a$, $b \in  \mathcal{C}$ tels que d$(a, b) < \delta$, on a $\mathcal{K}(\mathcal{C}_a^b) \leq \theta$.    
+\end{definition}
+
+Par la suite, nous appellerons courbe $\delta$-CTLB une courbe CTLB de paramètre $\theta = \frac{\pi}{2}$.\\
+
+Nous donnons une définition d'une surface $\delta$-CTLB comme suit :
+
+\begin{definition}[Surface $\delta$-CTLB]{}
+Une surface $\mathcal{S}$ est dite $\delta$-CTLB si pour toute paire de points $a$, $b$ de $\mathcal{S}$ tels que d$(a, b) < \delta$ il existe au moins un arc $\mathcal{C}_a^b$ de courbure totale inférieure ou égale à $\frac{\pi}{2}$.
+\end{definition}
+
+\subsection{Le cube comme surface \texorpdfstring{$\delta$}-CTLB}
+On cherche à montrer que le cube est une surface $\delta$-CTLB. Autrement dit, on va chercher à montrer que pour \textbf{toute paire $a, b$ il existe au moins un arc $\mathcal{C}_a^b$ de courbure totale inférieure ou égale à $\frac{\pi}{2}$}.\\
+
+%---------------------
+
+\subsection{Cercle circonscrit 1}
+
+On sait que le point $C$ donne un angle maximal lorsqu'il correspond au projeté orthogonal du centre O du cercle circonscrit à A, C et B. 
+En posant $A = (0, y_A, z_A)$, $B= (x_B, 0, z_B)$ et $C = (0, 0, z_C)$, on cherche $O(x, y, z_C)$ tel que $d(O, A) = d(O, C) = d(O, B)$ et $O$ est inclu dans le plan formé par $A$, $B$ et $C$ d'équation :
+$$x(y_A)(z_B - z_C)) + y(x_B(z_A - z_C)) = 0$$
+Cela revient donc à résoudre le système suivant :
+
+\begin{equation}
+    \begin{cases}
+      x^2 + y^2 = x^2 + (y - y_A)^2 + (z_C - z_A)^2\\
+      x^2 + y^2 = (x - x_B)^2 + y^2 + (z_C - z_B)^2\\
+      x(y_A)(z_B - z_C)) + y(x_B(z_A - z_C)) = 0
+    \end{cases}\,.
+\end{equation}
+
+
+
+\subsection{Cercle circonscrit 2}
+
+On cherche $C$ tel que le cercle circonscrit à $A = (0, y_A, z_A)$, $B= (x_B, 0, z_B)$ et $C = (0, 0, z_C)$ soit de rayon minimal. 
+\\
+Notons $a = d(A, B)$, $b = d(B, C)$ et $c = d(C, A)$.\\
+On cherche à minimiser la fonction suivante :\\
+$$R = \frac{abc}{4A}$$
+Avec $A$ l'aire de $ABC$ défini par la formule de Héron comme $A = \sqrt{s(s - a)(s - b)(s - c)}$ où $s = \frac{a + b + c}{2}$.\\
+
+On a $a = x_B^2 + y_A^2 + (z_A-z_B)^2$, $b = x_B^2 + (z_B-z)^2$, et $c = + y_A^2 + (z_A-z)^2$
+
+
+\subsection{Autre piste (ELQ)}
+Notons $A'$ et $B'$ les projetés orthogonaux respectifs de $A$ et $B$ sur l'arête.
+Soit $C \in [A', B']$.
+Notons $\theta := \kappa([A, C, B])$.
+Par Al-Kashi: 
+$$ AB^2 = AC^2 - 2 \cos(\pi - \theta)ACBC + BC^2 $$
+De plus, par pythagore on a : 
+$$BC^2 = BB'^2 + B'C^2 \quad \text{et} \quad AC^2 = AA'^2 + A'C^2$$
+En se servant de $A'B'= A'C + B'C$, on a donc,
+$$BC^2 = BB'^2 + (A'B' - A'C)^2 = BB'^2 + A'B'^2 - 2A'B' A'C + A'C^2$$
+
+D'où :
+
+\begin{align*}
+    cos(\pi - \theta) &= \frac{-AB^2 + AC^2 + BC^2}{2AC BC}\\
+    cos^2(\pi - \theta) &= \frac{(-AB^2 + AC^2 + BC^2)^2}{4AC^2 BC^2}\\
+    &= \frac{(-AB^2 +  AA'^2 + A'C^2 + BB'^2 + A'B'^2 - 2A'B' A'C + A'C^2)^2}{4(AA'^2 + A'C^2)(BB'^2 + A'B'^2 - 2A'B' A'C + A'C^2)}\\
+    &= \frac{(-d^2 +  H^2 + x^2 + l^2 - 2lx + x^2)^2}{4(AA'^2 + x^2)(BB'^2 + l^2 - 2lx + x^2)}\\
+    &= \frac{(-d^2 +  H^2 + 2x^2 + l^2 - 2lx)^2}{4(AA'^2 + x^2)(BB'^2 + l^2 - 2lx + x^2)}\\
+    &= \frac{(-d^2 +  H^2 + l^2 + 2x(-l + x))^2}{4(AA'^2 + x^2)(BB'^2 + l^2 - 2lx + x^2)}\\
+\end{align*}
+
+avec 
+\begin{align*}
+    d &= AB,\\
+    l &= A'B', \\
+    H^2 &= AA'^2 + BB'^2,\\
+    x &= A'C \in [0, l]
+\end{align*}
+En notant $z:= 2x(l-x) -H^2-l^2 \in [?, ?]$ (TO DO: déterminer les bornes)
+$$ cos^2 \theta = - \frac{(d^2-z)^2}{z} $$ 
+
+que l'on cherche à maximiser (pour minimiser $\theta$ si $cos \theta \geq 0$) et à minimiser (pour minimiser $\theta$ si $cos \theta \leq 0$).
+2 possibilités: soit l'extremum $z_{extremum}$ trouvé en $z$ est atteignable par $z(x)$, on fait le changement de variable inverse pour retrouver  $x$, sinon on essaie le $x$ qui minimise $z(x) -z_{extremum}$. 
+
+\subsubsection{preuve finale}
+
+Soit un cube de côté de longueur $c$, et soit $A$, $B$ deux points de ce cube tels que d$(A, B) < \delta$ avec $\delta < c$ fixé.
+On distingue ainsi trois configurations possibles :\\
+\begin{enumerate}
+    \item \textbf{$A$ et $B$ sont sur la même face} : ainsi, le segment reliant $A$ et $B$ est un arc $\mathcal{C}_A^B$ de courbure totale nulle donc inférieure à $\frac{\pi}{2}$
+    
+    \item \textbf{$A$ et $B$ sont sur deux faces adjacentes} : \\
+    On se place dans le repère orthonormé centré en I milieu de $AB$ tel que l'axe $y$ et l'axe $z$ forment le plan médiateur de $A$ et $B$ et tel que l'axe $x$ soit aligné sur la droite $AB$.\\
+    On a ainsi $A(x_A, 0, 0)$ et par symétrie $B(-x_A, 0, 0)$.\\
+    On cherche $O(0, y_O, z_O)$ le centre de la sphère passant par $A$, $B$ et son projeté orthogonal $C$ sur l'arête séparant $A$ et $B$, et tel que son rayon $OC$ soit minimal. L'arête est portée par le vecteur unitaire $u(x_u, y_u, z_u)$.\\
+    Soit $I'(0, y_I', 0)$ le point d'intersection entre l'arête et le plan médiateur. Comme $C$ est la projection orthogonale de O sur l'arête contenant $I'$, le triangle $OCI$ est rectangle en $C$ et on a donc l'égalité suivante :
+    $$OC^2 = OI'^2 - CI^2$$
+    D'une part, on a $OI'^2 = (y_O - y_I')^2 + z_O^2$.\\
+    D'autre part, on a $CI'^2 = \lambda^2$ avec $\lambda$ une distance que l'on veut minimiser.\\
+    Ainsi, 
+    \begin{equation}\label{eq:pythagoras}
+        OC^2 = OI'^2 - CI'^2 \Leftrightarrow OC^2 = (y_O - y_I')^2 + z_O^2 - \lambda^2\\
+    \end{equation}\\
+    
+    De plus, on sait que $C$ appartient à l'arête d'où $C = I' + \lambda u = (\lambda x_u, y_I' + \lambda y_u, \lambda z_u)$ et donc 
+    \begin{align}
+        OC^2 &= (\lambda x_u)^2 + (y_O - y_I' - \lambda y_u)^2 + (z_O - \lambda z_u)^2 \nonumber\\
+             &= \lambda^2x_u^2 + y_O^2 - 2y_O(y_I - \lambda y_u) + (y_I - \lambda y_u)^2 + z_O^2 - 2z_O\lambda z_u + \lambda^2z_u^2 \nonumber\\
+             &= \lambda^2x_u^2 + y_O^2 - 2y_Oy_I + 2\lambda y_Oy_u + y_I^2 - 2\lambda y_Iy_u + \lambda^2y_u^2 + z_O^2 - 2z_O\lambda z_u + \lambda^2z_u^2 \nonumber\\
+             &= \lambda^2(x_u^2 + y_u^2 + z_u^2) + \lambda(2y_Oy_u - 2y_Iy_u - 2z_Oz_u) + y_O^2 - 2y_Oy_I + y_I^2 + z_O^2 \nonumber\\
+             &= \lambda^2 + 2\lambda(y_Oy_u - y_Iy_u - z_Oz_u) + (y_O - y_I)^2 + z_O^2 \label{eq:vector}
+    \end{align}
+
+    Les expressions \ref{eq:pythagoras} et \ref{eq:vector} nous donnent l'équation suivante :
+    
+    \begin{align}
+        && \lambda^2 + 2\lambda(y_Oy_u - y_Iy_u - z_Oz_u) + (y_O - y_I)^2 + z_O^2 &= (y_O - y_I')^2 + z_O^2 - \lambda^2\nonumber\\
+        \Leftrightarrow && \lambda^2 + 2\lambda(y_Oy_u - y_Iy_u - z_Oz_u) &= - \lambda^2 \nonumber\\
+        \Leftrightarrow && 2\lambda^2 + 2\lambda(y_Oy_u - y_Iy_u - z_Oz_u) &= 0 \nonumber\\
+        \Leftrightarrow &&  -2\lambda z_Oz_u &= -2\lambda^2 - 2\lambda(y_Oy_u - y_Iy_u)\nonumber\\
+        \Leftrightarrow &&  z_O &= \frac{2\lambda^2 + 2\lambda(y_Oy_u - y_Iy_u)}{2\lambda z_u}\nonumber\\
+        \Leftrightarrow &&  z_O &= \frac{\lambda + y_Oy_u - y_Iy_u}{z_u}\label{eq:z_O_tmp}
+    \end{align}
+
+    Enfin, comme $O$ est le centre de la sphère passant par $A$, $B$ et $C$, on a :\\
+    \begin{align}
+        && OC^2 &= OA^2\nonumber\\
+        \Leftrightarrow && (y_O - y_I)^2 + z_O^2 - \lambda^2 &= x_A^2 + y_O^2 + z_O^2\nonumber\\
+        \Leftrightarrow && (y_O - y_I)^2 - \lambda^2 &= x_A^2 + y_O^2\nonumber\\
+        \Leftrightarrow && y_O^2 - 2y_O y_I + y_I^2 - \lambda^2 &= x_A^2 + y_O^2\nonumber\\
+        \Leftrightarrow && -2y_O y_I + y_I^2 - \lambda^2 &= x_A^2\nonumber\\
+        \Leftrightarrow && -2y_O y_I &= x_A^2 - y_I^2 + \lambda^2 \nonumber\\
+        \Leftrightarrow && y_O &= \frac{x_A^2 - y_I^2 + \lambda^2}{-2y_I}\nonumber\\
+        \Leftrightarrow && \Aboxed{y_O &= \frac{-x_A^2 + y_I^2 - \lambda^2}{2y_I}}\label{eq:y_O}
+    \end{align}
+    
+    En substituant \ref{eq:y_O} à \ref{eq:z_O_tmp}, on a donc :
+    
+    \begin{align}
+        z_O &= \frac{\lambda + y_Oy_u - y_Iy_u}{z_u} \nonumber\\
+            &= \frac{\lambda + \frac{-x_A^2 + y_I^2 - \lambda^2}{2y_I}y_u - y_Iy_u}{z_u} \nonumber\\
+            &= \frac{2\lambda y_I + y_u(-x_A^2 + y_I^2 - \lambda^2) - 2y_I^2y_u}{2y_Iz_u}  \nonumber\\
+            &= \frac{-\lambda^2y_u + 2\lambda y_I + y_u(-x_A^2 + y_I^2 - 2y_I^2)}{2y_Iz_u}  \nonumber\\
+            \Aboxed{ z_O &= \frac{-\lambda^2y_u + 2\lambda y_I  - y_u(x_A^2 + y_I^2)}{2y_Iz_u}}  \label{eq:z_O}
+    \end{align}
+    
+
+    Au final, on exprime $OC^2$ en fonction de $\lambda$ en substituant \ref{eq:y_O} et \ref{eq:z_O} à \ref{eq:pythagoras} :
+    \begin{align*}
+    OC^2 &= (y_O - y_I')^2 + z_O^2 - \lambda^2 \\
+         &= \left(\frac{-x_A^2 + y_I^2 - \lambda^2}{2y_I} - y_I'\right)^2 + \left(\frac{-\lambda^2y_u + 2\lambda y_I  - y_u(x_A^2 + y_I^2)}{2y_Iz_u}\right)^2 - \lambda^2 \\
+          &= \left(\frac{-x_A^2 - y_I^2 - \lambda^2}{2y_I}\right)^2 + \left( \frac{-\lambda^2y_u + 2\lambda y_I  - y_u(x_A^2 + y_I^2)}{2y_Iz_u}\right)^2 - \lambda^2 \\
+         &= f(\lambda) + g(\lambda) - h(\lambda)
+    \end{align*}
+    Notons $r$ cette fonction.\\
+    
+    On cherche à minimiser $r$ en fonction de $\lambda$.
+    D'une part on a :
+    \begin{align*}
+        f'(\lambda) &= 2\left(\frac{-2\lambda}{2y_I}\right)\left(\frac{-x_A^2 - y_I^2 - \lambda^2}{2y_I}\right)\\
+        &= \left(\frac{-\lambda}{y_I}\right)\left(\frac{-x_A^2 - y_I^2 - \lambda^2}{y_I}\right)\\
+        &= \frac{\lambda x_A^2 + \lambda y_I^2 + \lambda^3}{y_I^2}\\
+    \end{align*}
+    D'autre part on a :
+    \begin{align*}
+    g'(\lambda) &= 2\left(\frac{-2\lambda y_u + 2y_I}{2y_Iz_u}\right)\left(\frac{-\lambda^2y_u + 2\lambda y_I - y_u(x_A^2 + y_I^2)}{2y_Iz_u}\right) \\
+         &= \left(\frac{-\lambda y_u + y_I}{y_Iz_u}\right)\left(\frac{-\lambda^2y_u + 2\lambda y_I - y_u(x_A^2 + y_I^2)}{y_Iz_u}\right)\\
+         &= \frac{(-\lambda y_u + y_I)(-\lambda^2y_u + 2\lambda y_I - y_u(x_A^2 + y_I^2))}{y_I^2z_u^2}\\
+         &= \frac{\lambda^3y_u^2 - 2\lambda^2 y_Iy_u + \lambda y_u^2(x_A^2 + y_I^2) - \lambda^2y_Iy_u + 2\lambda y_I^2 - y_uy_I(x_A^2 + y_I^2)}{y_I^2z_u^2}\\
+         &= \frac{\lambda^3y_u^2 - 3\lambda^2 y_Iy_u + \lambda y_u^2(x_A^2 + y_I^2) + 2\lambda y_I^2 - y_uy_I(x_A^2 + y_I^2)}{y_I^2z_u^2}
+    \end{align*}
+    
+    Enfin, on a $h'(\lambda) = 2\lambda$.\\
+    
+    D'où :
+    \begin{align*}
+        r'(x) &= \frac{\lambda x_A^2 + \lambda y_I^2 + \lambda^3}{y_I^2} + \frac{\lambda^3y_u^2 - 3\lambda^2 y_Iy_u + \lambda y_u^2(x_A^2 + y_I^2) + 2\lambda y_I^2 - y_uy_I(x_A^2 + y_I^2)}{y_I^2z_u^2} - 2\lambda\\
+        &= \frac{\lambda x_A^2z_u^2 + \lambda y_I^2z_u^2 + \lambda^3z_u^2 + \lambda^3y_u^2 - 3\lambda^2 y_Iy_u + \lambda y_u^2(x_A^2 + y_I^2) + 2\lambda y_I^2 - y_uy_I(x_A^2 + y_I^2) - 2\lambda y_I^2z_u^2}{y_I^2z_u^2}\\
+        &=\frac{\lambda^3(z_u^2 + y_u^2) - \lambda^2(3y_Iy_u) + \lambda(x_A^2z_u^2 + y_I^2z_u^2 + y_u^2(x_A^2 + y_I^2) + 2y_I^2  - 2y_I^2z_u^2) - y_uy_I(x_A^2 + y_I^2)}{y_I^2z_u^2}\\
+        &=\frac{\lambda^3(z_u^2 + y_u^2) - \lambda^2(3y_Iy_u) + \lambda((x_A^2 + y_I^2)(z_u^2 + y_u^2) + 2y_I^2(1-z_u^2)) - y_uy_I(x_A^2 + y_I^2)}{y_I^2z_u^2}\\
+        %&=\frac{\lambda^3(z_u^2 + y_u^2) - 3\lambda^23y_Iy_u + \lambda(x_A^2z_u^2 - y_I^2z_u^2 + y_u^2(x_A^2 + y_I^2) +2y_I^2) - y_uy_I(x_A^2 + y_I^2)}{y_I^2z_u^2}\\
+    \end{align*}
+    
+    \item\textbf{$A$ et $B$ sont sur deux faces opposées} : // TODO
+\end{enumerate}
+
+%---------------------
+
+\subsubsection{Annexe : faux raisonnements}
+\textbf{Première intuition} : dans un cube, l'angle d'un arc reliant deux faces adjacentes est majoré par $\frac{\pi}{2}$.\\
+$\rightarrow$ en fait, c'est faux ? Si les points se rapprochent de l'arête, il est possible d'obtenir un angle allant de 0 à $\pi$... (cf figure \ref{fig:contre_ex_0})...\\
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.3\linewidth]{contre_ex_0.png}
+    \caption{Contre exemple pour la majoration de tout arc par $\frac{\pi}{2}$}.
+    \label{fig:contre_ex_0}
+\end{figure}
+
+\textbf{intuition} : l'arc le plus court reliant deux points issues de faces adjacentes possède une courbure totale minimale.
+$\rightarrow$ cela semble être encore faux (cf figure \ref{fig:contre_ex_1})...\\
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{contre_ex_1.png}
+    \caption{Contre exemple pour la correlation entre la longueur de la ligne polygonale et sa courbure : la ligne polygonale JMI (troisième ligne) reliant les points J et I possède la plus petite longueur (4.64), mais sa courbure n'est pas minimale}
+    \label{fig:contre_ex_1}
+\end{figure}
+
+\textbf{intuition} : la projection orthogonale du milieu du segment sur l'arête possède la plus petite courbure.\\
+$\rightarrow$ Faux, voir contre exemple en figure \ref{fig:contre_ex_2}\\
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.5\linewidth]{contre_ex_2.png}
+    \caption{Contre exemple pour la projection orthogonale du milieu du segment IJ : la projection est le deuxième point est possède un angle interne de 124.36° qui n'est pas maximal puisque le point 0 à sa gauche possède un angle de 129.37°.}
+    \label{fig:contre_ex_2}
+\end{figure}
+
+\textbf{intuition} : la projection orthogonale du centre de la plus petite sphère passant par I et J et adjacent à l'arête forme un point K tel que l'angle IJK soit minimal (voir preuve).\\
+
+\textbf{idées rejetées pour la preuve } :\\
+\begin{itemize}
+    \item En se plaçant dans un repère aligné sur le cube avec $A(0, y_A, z_A)$ et $B(x_B, 0, z_B)$, $O(x, y, z)$ et $C(0, 0, z)$, résoudre le système :
+\begin{equation}
+    \begin{cases}
+      d(O, C) = d(A, O)\\
+      d(O, C) = d(B, O)
+    \end{cases}\,.
+\end{equation}
+Donne un $OC^2$ de degré 4 qu'il faut minimiser par rapport à $z$, ce qui est trop compliqué.
+    \item En se plaçant dans le plan médiateur de $A$ et $B$ avec comme origine $I$ le milieu de $AB$, il n'est pas utile d'ajouter la contrainte de l'inclusion de $C$ dans le plan $AOB$ : cela signifierai que la famille de vecteurs $\overrightarrow{OA} = (-x_A, y_O, z_O)$, $\overrightarrow{OB} = (x_A, y_O, z_O)$ et $\overrightarrow{OC} = (- x_C, y_O - y_C, z_O - z_C)$ est liée, d'où :\\
+    \begin{align*}
+        &&                 \begin{vmatrix}
+                          -x_A & x_A & -x_C\\
+                           y_O  & y_O & y_O - y_C\\
+                           z_O  & z_O & z_O - z_C
+                           \end{vmatrix} &= 0\\
+        \Leftrightarrow && -x_A \begin{vmatrix}y_O & y_O - y_C\\z_O & z_O - z_C\end{vmatrix} - x_A \begin{vmatrix}y_O & y_O - y_C\\z_O & z_O - z_C\end{vmatrix} + x_C \begin{vmatrix}y_O & y_O\\z_O & z_O\end{vmatrix} &= 0\\
+        \Leftrightarrow && -2x_A(y_O(z_O - z_C) - z_O(y_O - y_C)) + x_C(y_Oz_O - z_Oy_O) &= 0\\
+        \Leftrightarrow && -2x_A(y_O(z_O - z_C) - z_O(y_O - y_C)) &= 0\\
+        \Leftrightarrow && -2x_A(y_Oz_O - y_Oz_C - z_Oy_O + z_Oy_C)) &= 0\\
+        \Leftrightarrow && -2x_A(z_Oy_C - y_Oz_C)) &= 0\\
+    \end{align*}
+    Ainsi, on a $\boxed{z_Oy_C = y_Oz_C}$ or cette équation n'est pas utile à notre système.\\
+    
+\end{itemize}
+
+
+
+
+
+
+
+
+
+\end{document} 
