@@ -80,36 +80,6 @@ On cherche à montrer que le cube est une surface $\delta$-CTLB. Autrement dit, 
 
 %---------------------
 
-\subsection{Cercle circonscrit 1}
-
-On sait que le point $C$ donne un angle maximal lorsqu'il correspond au projeté orthogonal du centre O du cercle circonscrit à A, C et B. 
-En posant $A = (0, y_A, z_A)$, $B= (x_B, 0, z_B)$ et $C = (0, 0, z_C)$, on cherche $O(x, y, z_C)$ tel que $d(O, A) = d(O, C) = d(O, B)$ et $O$ est inclu dans le plan formé par $A$, $B$ et $C$ d'équation :
-$$x(y_A)(z_B - z_C)) + y(x_B(z_A - z_C)) = 0$$
-Cela revient donc à résoudre le système suivant :
-
-\begin{equation}
-    \begin{cases}
-      x^2 + y^2 = x^2 + (y - y_A)^2 + (z_C - z_A)^2\\
-      x^2 + y^2 = (x - x_B)^2 + y^2 + (z_C - z_B)^2\\
-      x(y_A)(z_B - z_C)) + y(x_B(z_A - z_C)) = 0
-    \end{cases}\,.
-\end{equation}
-
-%Les deux premières équations nous donnent :
-%$$x = \frac{(z_C - z_B)^2 + x_B^2}{2x_B} \text{ et } y = \frac{(z_C - z_A)^2 + y_A^2}{2y_A}$$
-
-\subsection{Cercle circonscrit 2}
-
-On cherche $C$ tel que le cercle circonscrit à $A = (0, y_A, z_A)$, $B= (x_B, 0, z_B)$ et $C = (0, 0, z_C)$ soit de rayon minimal. 
-
-Notons $a = d(A, B)$, $b = d(B, C)$ et $c = d(C, A)$.\\
-On cherche à minimiser la fonction suivante :
-$$R = \frac{abc}{4A}$$
-Avec $A$ l'aire de $ABC$ défini par la formule de Héron comme $A = \sqrt{s(s - a)(s - b)(s - c)}$ où $s = \frac{a + b + c}{2}$.
-
-On a $a = x_B^2 + y_A^2 + (z_A-z_B)^2$, $b = x_B^2 + (z_B-z)^2$, et $c = + y_A^2 + (z_A-z)^2$
-
-
 \subsection{Autre piste (ELQ)}
 Notons $A'$ et $B'$ les projetés orthogonaux respectifs de $A$ et $B$ sur l'arête.
 Soit $C \in [A', B']$.
@@ -305,7 +275,42 @@ Donne un $OC^2$ de degré 4 qu'il faut minimiser par rapport à $z$, ce qui est 
         \Leftrightarrow && -2x_A(z_Oy_C - y_Oz_C)) &= 0\\
     \end{align*}
     Ainsi, on a $\boxed{z_Oy_C = y_Oz_C}$ or cette équation n'est pas utile à notre système.
-    
+
+    \item \textbf{Cercle circonscrit 1}
+
+On sait que le point $C$ donne un angle maximal lorsqu'il correspond au projeté orthogonal du centre O du cercle circonscrit à A, C et B. 
+En posant $A = (0, y_A, z_A)$, $B= (x_B, 0, z_B)$ et $C = (0, 0, z_C)$, on cherche $O(x, y, z_C)$ tel que $d(O, A) = d(O, C) = d(O, B)$ et $O$ est inclu dans le plan formé par $A$, $B$ et $C$ d'équation :
+$$x(y_A)(z_B - z_C)) + y(x_B(z_A - z_C)) = 0$$
+Cela revient donc à résoudre le système suivant :
+
+\begin{equation}
+    \begin{cases}
+      x^2 + y^2 = x^2 + (y - y_A)^2 + (z_C - z_A)^2\\
+      x^2 + y^2 = (x - x_B)^2 + y^2 + (z_C - z_B)^2\\
+      x(y_A)(z_B - z_C) + y(x_B)(z_A - z_C) = 0
+    \end{cases}\,.
+\end{equation}
+
+Les deux premières équations nous donnent :
+$$x = \frac{(z_C - z_B)^2 + x_B^2}{2x_B} \text{ et } y = \frac{(z_C - z_A)^2 + y_A^2}{2y_A}$$
+
+En substituant $x$ et $y$ dans la dernière équation, on résoud l'équation suivante pour trouver $z_C$ : 
+
+\begin{align*}
+\frac{((z_C - z_B)^2 + x_B^2)(y_A)(z_B - z_C)}{2x_B} + \frac{((z_C - z_A)^2 + y_A^2)(x_B)(z_A - z_C)}{2y_A} &= 0\\
+((z_C - z_B)^2 + x_B^2)(2y_A^2)(z_B - z_C) + ((z_C - z_A)^2 + y_A^2)(2x_B^2)(z_A - z_C) &= 0\\
+\end{align*}
+
+\item \textbf{Cercle circonscrit 2}
+
+On cherche $C$ tel que le cercle circonscrit à $A = (0, y_A, z_A)$, $B= (x_B, 0, z_B)$ et $C = (0, 0, z_C)$ soit de rayon minimal. 
+
+Notons $a = d(A, B)$, $b = d(B, C)$ et $c = d(C, A)$.\\
+On cherche à minimiser la fonction suivante :
+$$R = \frac{abc}{4A}$$
+Avec $A$ l'aire de $ABC$ défini par la formule de Héron comme $A = \sqrt{s(s - a)(s - b)(s - c)}$ où $s = \frac{a + b + c}{2}$.
+
+On a $a = x_B^2 + y_A^2 + (z_A-z_B)^2$, $b = x_B^2 + (z_B-z)^2$, et $c = + y_A^2 + (z_A-z)^2$
 \end{itemize}
 
 

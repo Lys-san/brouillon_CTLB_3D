@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1736340179.68166 "/home/lysandre/Documents/plmlatex/brouillon_CTLB_3D/main.tex" "main.pdf" "main" 1736340180.5318 0
-  "/home/lysandre/Documents/plmlatex/brouillon_CTLB_3D/main.tex" 1736340103.85753 17096 33a566514d5e064fbb943754014eed6c ""
+["pdflatex"] 1736341657.12659 "/home/lysandre/Documents/plmlatex/brouillon_CTLB_3D/main.tex" "main.pdf" "main" 1736341658.04223 0
+  "/home/lysandre/Documents/plmlatex/brouillon_CTLB_3D/main.tex" 1736341656.88577 17444 bf31ac6b622367d0396490f79555614e ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -183,9 +183,9 @@
   "contre_ex_0.png" 1736328547.01693 32821 31721d2c87c85997e6f769ad4f212352 ""
   "contre_ex_1.png" 1736328547.01393 72072 4530753d1102300d2395a921b43c3604 ""
   "contre_ex_2.png" 1736328547.01593 147161 c6b5c911208a8d20eb650b661f0f87ac ""
-  "main.aux" 1736340180.43783 3376 30f44c97a8692e593ee21b1ed9992ad8 "pdflatex"
-  "main.out" 1736340180.43883 1210 ad710f22ba071ad86cc43aae6877e2fc "pdflatex"
-  "main.tex" 1736340103.85753 17096 33a566514d5e064fbb943754014eed6c ""
+  "main.aux" 1736341657.96977 3122 7b7baaeac991b25e25df83ff163a6e3d "pdflatex"
+  "main.out" 1736341657.97077 884 0390ef715e74eca85ad010b1a2823c7c "pdflatex"
+  "main.tex" 1736341656.88577 17444 bf31ac6b622367d0396490f79555614e ""
   (generated)
   "main.aux"
   "main.log"
