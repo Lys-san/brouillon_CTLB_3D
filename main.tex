@@ -61,14 +61,13 @@
 \section{Definition}
 
 \subsection{Rappel}
-
-Dans un premier lieu, il est important de rappeler la notion de courbe $(\theta, \delta)$-CTLB.\\
+Dans un premier lieu, il est important de rappeler la notion de courbe $(\theta, \delta)$-CTLB.
 
 \begin{definition}[Courbe $(\theta, \delta)$-CTLB]{}
 Une courbe de Jordan $\mathcal{C}$ est dite $(\theta, \delta)$-CTLB si pour toute paire de point $a$, $b \in  \mathcal{C}$ tels que d$(a, b) < \delta$, on a $\mathcal{K}(\mathcal{C}_a^b) \leq \theta$.    
 \end{definition}
 
-Par la suite, nous appellerons courbe $\delta$-CTLB une courbe CTLB de paramètre $\theta = \frac{\pi}{2}$.\\
+Par la suite, nous appellerons courbe $\delta$-CTLB une courbe CTLB de paramètre $\theta = \frac{\pi}{2}$.
 
 Nous donnons une définition d'une surface $\delta$-CTLB comme suit :
 
@@ -77,7 +76,7 @@ Une surface $\mathcal{S}$ est dite $\delta$-CTLB si pour toute paire de points $
 \end{definition}
 
 \subsection{Le cube comme surface \texorpdfstring{$\delta$}-CTLB}
-On cherche à montrer que le cube est une surface $\delta$-CTLB. Autrement dit, on va chercher à montrer que pour \textbf{toute paire $a, b$ il existe au moins un arc $\mathcal{C}_a^b$ de courbure totale inférieure ou égale à $\frac{\pi}{2}$}.\\
+On cherche à montrer que le cube est une surface $\delta$-CTLB. Autrement dit, on va chercher à montrer que pour \textbf{toute paire $a, b$ il existe au moins un arc $\mathcal{C}_a^b$ de courbure totale inférieure ou égale à $\frac{\pi}{2}$}.
 
 %---------------------
 
@@ -96,16 +95,17 @@ Cela revient donc à résoudre le système suivant :
     \end{cases}\,.
 \end{equation}
 
-
+%Les deux premières équations nous donnent :
+%$$x = \frac{(z_C - z_B)^2 + x_B^2}{2x_B} \text{ et } y = \frac{(z_C - z_A)^2 + y_A^2}{2y_A}$$
 
 \subsection{Cercle circonscrit 2}
 
 On cherche $C$ tel que le cercle circonscrit à $A = (0, y_A, z_A)$, $B= (x_B, 0, z_B)$ et $C = (0, 0, z_C)$ soit de rayon minimal. 
-\\
+
 Notons $a = d(A, B)$, $b = d(B, C)$ et $c = d(C, A)$.\\
-On cherche à minimiser la fonction suivante :\\
+On cherche à minimiser la fonction suivante :
 $$R = \frac{abc}{4A}$$
-Avec $A$ l'aire de $ABC$ défini par la formule de Héron comme $A = \sqrt{s(s - a)(s - b)(s - c)}$ où $s = \frac{a + b + c}{2}$.\\
+Avec $A$ l'aire de $ABC$ défini par la formule de Héron comme $A = \sqrt{s(s - a)(s - b)(s - c)}$ où $s = \frac{a + b + c}{2}$.
 
 On a $a = x_B^2 + y_A^2 + (z_A-z_B)^2$, $b = x_B^2 + (z_B-z)^2$, et $c = + y_A^2 + (z_A-z)^2$
 
@@ -148,7 +148,7 @@ que l'on cherche à maximiser (pour minimiser $\theta$ si $cos \theta \geq 0$) e
 \subsubsection{preuve finale}
 
 Soit un cube de côté de longueur $c$, et soit $A$, $B$ deux points de ce cube tels que d$(A, B) < \delta$ avec $\delta < c$ fixé.
-On distingue ainsi trois configurations possibles :\\
+On distingue ainsi trois configurations possibles :
 \begin{enumerate}
     \item \textbf{$A$ et $B$ sont sur la même face} : ainsi, le segment reliant $A$ et $B$ est un arc $\mathcal{C}_A^B$ de courbure totale nulle donc inférieure à $\frac{\pi}{2}$
     
@@ -163,7 +163,7 @@ On distingue ainsi trois configurations possibles :\\
     Ainsi, 
     \begin{equation}\label{eq:pythagoras}
         OC^2 = OI'^2 - CI'^2 \Leftrightarrow OC^2 = (y_O - y_I')^2 + z_O^2 - \lambda^2\\
-    \end{equation}\\
+    \end{equation}
     
     De plus, on sait que $C$ appartient à l'arête d'où $C = I' + \lambda u = (\lambda x_u, y_I' + \lambda y_u, \lambda z_u)$ et donc 
     \begin{align}
@@ -185,7 +185,7 @@ On distingue ainsi trois configurations possibles :\\
         \Leftrightarrow &&  z_O &= \frac{\lambda + y_Oy_u - y_Iy_u}{z_u}\label{eq:z_O_tmp}
     \end{align}
 
-    Enfin, comme $O$ est le centre de la sphère passant par $A$, $B$ et $C$, on a :\\
+    Enfin, comme $O$ est le centre de la sphère passant par $A$, $B$ et $C$, on a :
     \begin{align}
         && OC^2 &= OA^2\nonumber\\
         \Leftrightarrow && (y_O - y_I)^2 + z_O^2 - \lambda^2 &= x_A^2 + y_O^2 + z_O^2\nonumber\\
@@ -215,7 +215,7 @@ On distingue ainsi trois configurations possibles :\\
           &= \left(\frac{-x_A^2 - y_I^2 - \lambda^2}{2y_I}\right)^2 + \left( \frac{-\lambda^2y_u + 2\lambda y_I  - y_u(x_A^2 + y_I^2)}{2y_Iz_u}\right)^2 - \lambda^2 \\
          &= f(\lambda) + g(\lambda) - h(\lambda)
     \end{align*}
-    Notons $r$ cette fonction.\\
+    Notons $r$ cette fonction.
     
     On cherche à minimiser $r$ en fonction de $\lambda$.
     D'une part on a :
@@ -233,17 +233,16 @@ On distingue ainsi trois configurations possibles :\\
          &= \frac{\lambda^3y_u^2 - 3\lambda^2 y_Iy_u + \lambda y_u^2(x_A^2 + y_I^2) + 2\lambda y_I^2 - y_uy_I(x_A^2 + y_I^2)}{y_I^2z_u^2}
     \end{align*}
     
-    Enfin, on a $h'(\lambda) = 2\lambda$.\\
+    Enfin, on a $h'(\lambda) = 2\lambda$.
     
     D'où :
     \begin{align*}
         r'(x) &= \frac{\lambda x_A^2 + \lambda y_I^2 + \lambda^3}{y_I^2} + \frac{\lambda^3y_u^2 - 3\lambda^2 y_Iy_u + \lambda y_u^2(x_A^2 + y_I^2) + 2\lambda y_I^2 - y_uy_I(x_A^2 + y_I^2)}{y_I^2z_u^2} - 2\lambda\\
         &= \frac{\lambda x_A^2z_u^2 + \lambda y_I^2z_u^2 + \lambda^3z_u^2 + \lambda^3y_u^2 - 3\lambda^2 y_Iy_u + \lambda y_u^2(x_A^2 + y_I^2) + 2\lambda y_I^2 - y_uy_I(x_A^2 + y_I^2) - 2\lambda y_I^2z_u^2}{y_I^2z_u^2}\\
         &=\frac{\lambda^3(z_u^2 + y_u^2) - \lambda^2(3y_Iy_u) + \lambda(x_A^2z_u^2 + y_I^2z_u^2 + y_u^2(x_A^2 + y_I^2) + 2y_I^2  - 2y_I^2z_u^2) - y_uy_I(x_A^2 + y_I^2)}{y_I^2z_u^2}\\
-        &=\frac{\lambda^3(z_u^2 + y_u^2) - \lambda^2(3y_Iy_u) + \lambda((x_A^2 + y_I^2)(z_u^2 + y_u^2) + 2y_I^2(1-z_u^2)) - y_uy_I(x_A^2 + y_I^2)}{y_I^2z_u^2}\\
+        &=\frac{\lambda^3(z_u^2 + y_u^2) - \lambda^2(3y_Iy_u) + \lambda((x_A^2 + y_I^2)(z_u^2 + y_u^2) + 2y_I^2(1-z_u^2)) - y_uy_I(x_A^2 + y_I^2)}{y_I^2z_u^2}
         %&=\frac{\lambda^3(z_u^2 + y_u^2) - 3\lambda^23y_Iy_u + \lambda(x_A^2z_u^2 - y_I^2z_u^2 + y_u^2(x_A^2 + y_I^2) +2y_I^2) - y_uy_I(x_A^2 + y_I^2)}{y_I^2z_u^2}\\
     \end{align*}
-    
     \item\textbf{$A$ et $B$ sont sur deux faces opposées} : // TODO
 \end{enumerate}
 
@@ -251,7 +250,7 @@ On distingue ainsi trois configurations possibles :\\
 
 \subsubsection{Annexe : faux raisonnements}
 \textbf{Première intuition} : dans un cube, l'angle d'un arc reliant deux faces adjacentes est majoré par $\frac{\pi}{2}$.\\
-$\rightarrow$ en fait, c'est faux ? Si les points se rapprochent de l'arête, il est possible d'obtenir un angle allant de 0 à $\pi$... (cf figure \ref{fig:contre_ex_0})...\\
+$\rightarrow$ en fait, c'est faux ? Si les points se rapprochent de l'arête, il est possible d'obtenir un angle allant de 0 à $\pi$... (cf figure \ref{fig:contre_ex_0})...
 
 \begin{figure}[!h]
     \centering
@@ -261,7 +260,7 @@ $\rightarrow$ en fait, c'est faux ? Si les points se rapprochent de l'arête, il
 \end{figure}
 
 \textbf{intuition} : l'arc le plus court reliant deux points issues de faces adjacentes possède une courbure totale minimale.
-$\rightarrow$ cela semble être encore faux (cf figure \ref{fig:contre_ex_1})...\\
+$\rightarrow$ cela semble être encore faux (cf figure \ref{fig:contre_ex_1})...
 
 \begin{figure}[!h]
     \centering
@@ -271,7 +270,7 @@ $\rightarrow$ cela semble être encore faux (cf figure \ref{fig:contre_ex_1})...
 \end{figure}
 
 \textbf{intuition} : la projection orthogonale du milieu du segment sur l'arête possède la plus petite courbure.\\
-$\rightarrow$ Faux, voir contre exemple en figure \ref{fig:contre_ex_2}\\
+$\rightarrow$ Faux, voir contre exemple en figure \ref{fig:contre_ex_2}
 
 \begin{figure}[!h]
     \centering
@@ -280,9 +279,9 @@ $\rightarrow$ Faux, voir contre exemple en figure \ref{fig:contre_ex_2}\\
     \label{fig:contre_ex_2}
 \end{figure}
 
-\textbf{intuition} : la projection orthogonale du centre de la plus petite sphère passant par I et J et adjacent à l'arête forme un point K tel que l'angle IJK soit minimal (voir preuve).\\
+\textbf{intuition} : la projection orthogonale du centre de la plus petite sphère passant par I et J et adjacent à l'arête forme un point K tel que l'angle IJK soit minimal (voir preuve).
 
-\textbf{idées rejetées pour la preuve } :\\
+\textbf{idées rejetées pour la preuve } :
 \begin{itemize}
     \item En se plaçant dans un repère aligné sur le cube avec $A(0, y_A, z_A)$ et $B(x_B, 0, z_B)$, $O(x, y, z)$ et $C(0, 0, z)$, résoudre le système :
 \begin{equation}
@@ -292,7 +291,7 @@ $\rightarrow$ Faux, voir contre exemple en figure \ref{fig:contre_ex_2}\\
     \end{cases}\,.
 \end{equation}
 Donne un $OC^2$ de degré 4 qu'il faut minimiser par rapport à $z$, ce qui est trop compliqué.
-    \item En se plaçant dans le plan médiateur de $A$ et $B$ avec comme origine $I$ le milieu de $AB$, il n'est pas utile d'ajouter la contrainte de l'inclusion de $C$ dans le plan $AOB$ : cela signifierai que la famille de vecteurs $\overrightarrow{OA} = (-x_A, y_O, z_O)$, $\overrightarrow{OB} = (x_A, y_O, z_O)$ et $\overrightarrow{OC} = (- x_C, y_O - y_C, z_O - z_C)$ est liée, d'où :\\
+    \item En se plaçant dans le plan médiateur de $A$ et $B$ avec comme origine $I$ le milieu de $AB$, il n'est pas utile d'ajouter la contrainte de l'inclusion de $C$ dans le plan $AOB$ : cela signifierai que la famille de vecteurs $\overrightarrow{OA} = (-x_A, y_O, z_O)$, $\overrightarrow{OB} = (x_A, y_O, z_O)$ et $\overrightarrow{OC} = (- x_C, y_O - y_C, z_O - z_C)$ est liée, d'où :
     \begin{align*}
         &&                 \begin{vmatrix}
                           -x_A & x_A & -x_C\\
@@ -305,7 +304,7 @@ Donne un $OC^2$ de degré 4 qu'il faut minimiser par rapport à $z$, ce qui est 
         \Leftrightarrow && -2x_A(y_Oz_O - y_Oz_C - z_Oy_O + z_Oy_C)) &= 0\\
         \Leftrightarrow && -2x_A(z_Oy_C - y_Oz_C)) &= 0\\
     \end{align*}
-    Ainsi, on a $\boxed{z_Oy_C = y_Oz_C}$ or cette équation n'est pas utile à notre système.\\
+    Ainsi, on a $\boxed{z_Oy_C = y_Oz_C}$ or cette équation n'est pas utile à notre système.
     
 \end{itemize}
 
