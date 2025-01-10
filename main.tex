@@ -94,34 +94,42 @@ Soit $C \in [A', B']$.
 Notons $\theta := \kappa([A, C, B])$.
 Les points $A$ $B$ et $C$ forment un triangle, et par Al-Kashi on a : 
 $$ AB^2 = AC^2 - 2 \cos(\pi - \theta)ACBC + BC^2 $$
-De plus, par pythagore on a : 
-$$BC^2 = BB'^2 + B'C^2 \quad \text{et} \quad AC^2 = AA'^2 + A'C^2$$
-En se servant de $A'B'= A'C + B'C$, on a donc,
-$$BC^2 = BB'^2 + (A'B' - A'C)^2 = BB'^2 + A'B'^2 - 2A'B' A'C + A'C^2$$
+% De plus, par pythagore on a : 
+% $$BC^2 = BB'^2 + B'C^2 \quad \text{et} \quad AC^2 = AA'^2 + A'C^2$$
+% En se servant de $A'B'= A'C + B'C$, on a donc,
+% $$BC^2 = BB'^2 + (A'B' - A'C)^2 = BB'^2 + A'B'^2 - 2A'B' A'C + A'C^2$$
 
 D'où :
 
 \begin{align*}
     cos(\pi - \theta) &= \frac{-AB^2 + AC^2 + BC^2}{2AC BC}\\
-    cos^2(\pi - \theta) &= \frac{(-AB^2 + AC^2 + BC^2)^2}{4AC^2 BC^2}\\
-    &= \frac{(-AB^2 +  AA'^2 + A'C^2 + BB'^2 + A'B'^2 - 2A'B' A'C + A'C^2)^2}{4(AA'^2 + A'C^2)(BB'^2 + A'B'^2 - 2A'B' A'C + A'C^2)}\\
-    &= \frac{(-d^2 +  H^2 + x^2 + l^2 - 2lx + x^2)^2}{4(AA'^2 + x^2)(BB'^2 + l^2 - 2lx + x^2)}\\
-    &= \frac{(-d^2 +  H^2 + 2x^2 + l^2 - 2lx)^2}{4(AA'^2 + x^2)(BB'^2 + l^2 - 2lx + x^2)}\\
-    &= \frac{(-d^2 +  H^2 + l^2 + 2x(-l + x))^2}{4(AA'^2 + x^2)(BB'^2 + l^2 - 2lx + x^2)}\\
+    &= \frac{-(z_A - z_B)^2 + (z_A - z_C)^2 + (z_B- z_C)^2}{2\sqrt{y_A^2 + (z_A - z_C)^2}\sqrt{x_B^2 + (z_B - z_C)^2}}
+    %cos^2(\pi - \theta) &= \frac{(-AB^2 + AC^2 + BC^2)^2}{4AC^2 BC^2}\\
+    %&= \frac{(-AB^2 +  AA'^2 + A'C^2 + BB'^2 + A'B'^2 - 2A'B' A'C + A'C^2)^2}{4(AA'^2 + A'C^2)(BB'^2 + A'B'^2 - 2A'B' A'C + A'C^2)}\\
+    %&= \frac{(-d^2 +  H^2 + x^2 + l^2 - 2lx + x^2)^2}{4(AA'^2 + x^2)(BB'^2 + l^2 - 2lx + x^2)}\\
+    %&= \frac{(-d^2 +  H^2 + 2x^2 + l^2 - 2lx)^2}{4(AA'^2 + x^2)(BB'^2 + l^2 - 2lx + x^2)}\\
+    %&= \frac{(-d^2 +  H^2 + l^2 + 2x(-l + x))^2}{4(AA'^2 + x^2)(BB'^2 + l^2 - 2lx + x^2)}\\
 \end{align*}
 
-avec 
-\begin{align*}
-    d &= AB,\\
-    l &= A'B', \\
-    H^2 &= AA'^2 + BB'^2,\\
-    x &= A'C \in [0, l]
-\end{align*}
-En notant $z:= 2x(l-x) -H^2-l^2 \in [?, ?]$ (TO DO: déterminer les bornes)
-$$ cos^2 \theta = - \frac{(d^2-z)^2}{z} $$ 
+Notons $f$ cette fonction.\\
+$f$ s'annule en $z_C = z_A$ et $z_c = z_B$, où on a $\theta = \frac{\pi}{2}$.\\
+Comme la fonction cosinus est continue, on sait par le théorème des valeurs intermédiaires que $f$ est soit positive soit négative sur $[z_A, z_B]$. Le dénominateur était positif car produit de fonctions positives, on se restreint à l'étude de signe du numérateur $u(z_C)$.\\
+On a $u'(z_C) = 4z_C - z_A - z_B$ linéaire et croissante sur $\mathbb{R}$, $u$ est donc convexe sur $\mathbb{R}$ et donc sur $[z_A, z_B]$.\\
+Ainsi, pour tout $z_C \in [z_A, z_B]$, $f(z_C) \leq 0$, et donc $\theta \leq \frac{\pi}{2}$.
 
-que l'on cherche à maximiser (pour minimiser $\theta$ si $cos \theta \geq 0$) et à minimiser (pour minimiser $\theta$ si $cos \theta \leq 0$).
-2 possibilités: soit l'extremum $z_{extremum}$ trouvé en $z$ est atteignable par $z(x)$, on fait le changement de variable inverse pour retrouver  $x$, sinon on essaie le $x$ qui minimise $z(x) -z_{extremum}$. 
+
+% avec 
+% \begin{align*}
+%     d &= AB,\\
+%     l &= A'B', \\
+%     H^2 &= AA'^2 + BB'^2,\\
+%     x &= A'C \in [0, l]
+% \end{align*}
+% En notant $z:= 2x(l-x) -H^2-l^2 \in [?, ?]$ (TO DO: déterminer les bornes)
+% $$ cos^2 \theta = - \frac{(d^2-z)^2}{z} $$ 
+
+% que l'on cherche à maximiser (pour minimiser $\theta$ si $cos \theta \geq 0$) et à minimiser (pour minimiser $\theta$ si $cos \theta \leq 0$).
+% 2 possibilités: soit l'extremum $z_{extremum}$ trouvé en $z$ est atteignable par $z(x)$, on fait le changement de variable inverse pour retrouver  $x$, sinon on essaie le $x$ qui minimise $z(x) -z_{extremum}$. 
 
 \subsubsection{preuve finale}
 
