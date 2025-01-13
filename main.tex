@@ -89,7 +89,7 @@ On cherche à montrer que le cube est une surface $\delta$-CTLB. Autrement dit, 
     \label{fig:al_kashi}
 \end{figure}
 
-Soient $A(0, y_A, z_A)$ et $B(x_B, 0, z_B)$ deux points situés sur deux faces adjacentes du cube. Soit $C(0, 0, C)$ un point de l'arête séparant ces deux faces.\\
+Soient $A(0, y_A, z_A)$ et $B(x_B, 0, z_B)$ deux points situés sur deux faces adjacentes du cube. Soit $C(0, 0, z_C)$ un point de l'arête séparant ces deux faces.\\
 Notons $\theta := \kappa([A, C, B])$ la courbure de la ligne polygonale formée par $A$, $B$ et $C$.\\
 
 Les points $A$ $B$ et $C$ forment un triangle, et par Al-Kashi on a : 
@@ -102,7 +102,7 @@ $$ AB^2 = AC^2 - 2 \cos(\pi - \theta)ACBC + BC^2 $$
 D'où :
 
 \begin{align*}
-    cos(\pi - \theta) &= \frac{-AB^2 + AC^2 + BC^2}{2AC BC}\\
+    \cos(\pi - \theta) &= \frac{-AB^2 + AC^2 + BC^2}{2AC BC}\\
     &= \frac{-(z_A - z_B)^2 + (z_A - z_C)^2 + (z_B- z_C)^2}{2\sqrt{y_A^2 + (z_A - z_C)^2}\sqrt{x_B^2 + (z_B - z_C)^2}}
     %cos^2(\pi - \theta) &= \frac{(-AB^2 + AC^2 + BC^2)^2}{4AC^2 BC^2}\\
     %&= \frac{(-AB^2 +  AA'^2 + A'C^2 + BB'^2 + A'B'^2 - 2A'B' A'C + A'C^2)^2}{4(AA'^2 + A'C^2)(BB'^2 + A'B'^2 - 2A'B' A'C + A'C^2)}\\
@@ -112,10 +112,11 @@ D'où :
 \end{align*}
 
 Notons $f$ cette fonction.\\
-$f$ s'annule en $z_C = z_A$ et $z_c = z_B$, où on a $\theta = \frac{\pi}{2}$.\\
-Comme la fonction cosinus est continue, on sait que $f$ est soit positive soit négative sur $[z_A, z_B]$. Le dénominateur était positif car produit de fonctions positives, on se restreint à l'étude de signe du numérateur $u(z_C)$.\\
+$f$ s'annule en $z_C = z_A$ et $z_c = z_B$, où on a alors $\pi - \theta = \arccos(0)$ et donc $\theta = \frac{\pi}{2}$.\\
+Comme la fonction cosinus est continue par définition, et que $f$ ne s'annule pas sur $]z_A, z_B[$, on sait qu'elle est soit positive soit négative sur cet ensemble.\\
+Le dénominateur était positif car produit de fonctions positives, on se restreint à l'étude de signe du numérateur $u(z_C) = -(z_A - z_B)^2 + (z_A - z_C)^2 + (z_B- z_C)^2$.\\
 On a $u'(z_C) = 4z_C - z_A - z_B$ linéaire et croissante sur $\mathbb{R}$, $u$ est donc convexe sur $\mathbb{R}$ et donc sur $[z_A, z_B]$.\\
-Ainsi, pour tout $z_C \in [z_A, z_B]$, $f(z_C) \leq 0$, et donc $\theta \leq \frac{\pi}{2}$.
+Ainsi, \underline{pour tout $z_C \in [z_A, z_B]$, $f(z_C) \leq 0$, et donc $\theta \leq \frac{\pi}{2}$}.
 
 
 % avec 
