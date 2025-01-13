@@ -1,4 +1,4 @@
- \documentclass{article}
+\documentclass{article}
 
 % Language setting
 % Replace `english' with e.g. `spanish' to change the document language
@@ -17,6 +17,9 @@
 \usepackage{subcaption}
 \usepackage[normalem]{ulem}
 \usepackage[framemethod=TikZ]{mdframed}
+\newtheorem{prop}{Proposition}
+\newtheorem{lem}{Lemme}
+\newtheorem{rem}{Remarque}
 \newcounter{mydef}[section]\setcounter{mydef}{0}
 \renewcommand{\themydef}{\arabic{section}.\arabic{mydef}}
 
@@ -131,6 +134,42 @@ Ainsi, \underline{pour tout $z_C \in [z_A, z_B]$, $f(z_C) \leq 0$, et donc $\the
 
 % que l'on cherche à maximiser (pour minimiser $\theta$ si $cos \theta \geq 0$) et à minimiser (pour minimiser $\theta$ si $cos \theta \leq 0$).
 % 2 possibilités: soit l'extremum $z_{extremum}$ trouvé en $z$ est atteignable par $z(x)$, on fait le changement de variable inverse pour retrouver  $x$, sinon on essaie le $x$ qui minimise $z(x) -z_{extremum}$. 
+
+\subsubsection{Preuve géométrique}
+
+%On s’intéresse au cas où on a un point sur une face d’un cube et un autre sur une face adjacente. On cherche à montrer qu’il existe un chemin entre ces deux points dont l’angle est inférieur ou égal à pi/2. 
+Dans toute la suite, angle désigne l’angle externe. on suppose qu'aucun des deux point A, B n'appartient à l'arête
+
+\begin{prop}
+si on déplie les deux faces de sorte à ce qu’elles soient dans le même plan, alors le segment de droite qui relie les deux points croise l’arête en un point qui donne un angle minimal sur le cube.
+\end{prop}
+Preuve : 
+Soit $A^r$ le point $A$ déplié. Pour tout point P de l’arête, la longueur de APB est égale à celle d’$A^rPB$ car elle est la somme de la longueur des segments $A^rP$ et $PB$ qui est invariante par la rotation (d’axe l’arête) transformant $A$ en $A^r$. Or la longueur d’$A^rCB$ est plus petite que celle d’$A^rC’B$ par définition : elle est minimale et il en va donc de même pour $ACB.$
+
+
+\begin{lem}
+Soit A et B deux points de $\mathbb{R}^3$ et deux points P et P’ distincts de A et B tels que $|AP|<|AP’|$ et $|BP|<|BP’|$ alors les angles $APB<AP’B$.
+\end{lem}
+Preuve : on peut, en appliquant un rotation d’axe (AB) ramener point P’ dans le plan APB de sorte à ce que le triangle APB soit contenu dans le triangle AP’B. C’est une transformation rigide qui ne modifie pas les angles du triangle AP’B. De cette inclusion, on déduit que l’angle APB est strictement inférieur à l’angle AP’B.  
+
+Les point C et C’ respectent les hypothèses du lemme par rapport à A et B. Ainsi l’angle ACB est minimal. 
+
+On note $A^\perp$ est le projeté orthogonal de $A$ sur l’arête, et de même pour $B$.
+\begin{lem}
+Les angles  $AA^\perp B$ et $AB^\perp B$ sont droits.
+\end{lem}
+En effet, $A^\perp$ est le projeté orthogonal sur l’arête, le segment $AA^\perp$ est orthogonal à la face contenant B et donc à B lui-même. 
+
+Ainsi ACB est inférieur ou égal à $AA^\perp B=\pi/2$ et le cas d’égalité est pour $A^\perp =B^\perp $
+
+\begin{rem}
+Ddans cette preuve, on obtient 
+\begin{itemize}
+    \item uUne méthode de construction de l’arc de courbure minimal (et c’est valable pour deux faces avec des angles quelconques). C'est bien celui de longueur minimale,
+    \item lLa valeur des angles aux projetés orthogonaux. 
+\end{itemize}
+\end{rem}
+
 
 \subsubsection{preuve finale}
 
