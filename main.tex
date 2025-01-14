@@ -121,9 +121,16 @@ Le dénominateur était positif car produit de fonctions positives, on se restre
 On a $u'(z_C) = 4z_C - 2z_A - 2z_B$ linéaire et croissante sur $\mathbb{R}$, $u$ est donc convexe sur $\mathbb{R}$ et donc sur $[z_A, z_B]$.\\
 Ainsi, \underline{pour tout $z_C \in [z_A, z_B]$, $f(z_C) \leq 0$, et donc $\theta \leq \frac{\pi}{2}$}.
 
-ELQ: pour $u'$, j'ai trouvé: $u'(z_C) = 4z_C - 2z_A - 2z_B$\\
-Lysandre : Bien vu, c'était une erreur de ma part.
+\subsubsection{recherche de minimum}
+ En reprenant $f$ comme défini précédemment, on a : 
+\begin{align*}
+    f'(z_C) &= - \frac{z_A + z_B - 2z_C}{\sqrt{x_B^2 + (z_B - z_C)^2} \sqrt{y_A^2 + (z_A - z_C)^2}} \\
+    &- \frac{(z_A - z_B)^2 - (z_A - z_C)^2 - (z_B - z_C)^2}{2\sqrt{x_B^2 + (z_B - z_C)^2} \cdot (y_A^2 + (z_A - z_C)^2)^{3/2}} \cdot (z_A - z_C) \\
+    &- \frac{(z_A - z_B)^2 - (z_A - z_C)^2 - (z_B - z_C)^2}{2(x_B^2 + (z_B - z_C)^2)^{3/2} \cdot \sqrt{y_A^2 + (z_A - z_C)^2}} \cdot (z_B - z_C)
+\end{align*}
 
+La racine réelle de $f'$ est :
+$$z_C = \frac{1}{3} \left( \frac{3 \left( x_B^2 z_A + y_A^2 z_B \right)^2}{\left( x_B^2 + y_A^2 \right)^2} - \frac{3 y_A^2 z_B^2 + \left( 2 y_A^2 + 3 z_A^2 \right) x_B^2}{x_B^2 + y_A^2} \right) \Bigg/ \left( \frac{1}{6} \sqrt{ \frac{32}{3} x_B^4 y_A^2 + \frac{32}{3} x_B^2 y_A^4 + 9 z_A^6 - 54 z_A z_B^5 + 9 z_B^6 + 18 \left( x_B^2 + y_A^2 \right) z_A^4 + 9 \left( 2 x_B^2 + 2 y_A^2 + 15 z_A^2 \right) z_B^4 - 36 \left( 5 z_A^3 + 2 \left( x_B^2 + y_A^2 \right) z_A \right) z_B^3 + 3 \left( 3 x_B^4 + 10 x_B^2 y_A^2 + 3 y_A^4 \right) z_A^2 + 3 \left( 3 x_B^4 + 10 x_B^2 y_A^2 + 3 y_A^4 + 45 z_A^4 + 36 \left( x_B^2 + y_A^2 \right) z_A^2 \right) z_B^2 - 6 \left( 9 z_A^5 + 12 \left( x_B^2 + y_A^2 \right) z_A^3 + \left( 3 x_B^4 + 10 x_B^2 y_A^2 + 3 y_A^4 \right) z_A \right) z_B } \frac{x_B^2 y_A^2}{\left( x_B^2 + y_A^2 \right)^2} + \frac{\left( x_B^2 z_A + y_A^2 z_B \right)^3}{\left( x_B^2 + y_A^2 \right)^3} - \frac{1}{2} \frac{3 y_A^2 z_B^2 + \left( 2 y_A^2 + 3 z_A^2 \right) x_B^2}{x_B^2 + y_A^2} \cdot \frac{ \left( x_B^2 z_A + y_A^2 z_B \right)}{\left( x_B^2 + y_A^2 \right)^2} + \frac{1}{2} \frac{y_A^2 z_B^3 + \left( y_A^2 \left( z_A + z_B \right) + z_A^3 \right) x_B^2}{x_B^2 + y_A^2} \right)^{\frac{1}{3}} + \frac{x_B^2 z_A + y_A^2 z_B}{x_B^2 + y_A^2}$$
 
 % avec 
 % \begin{align*}
@@ -138,7 +145,7 @@ Lysandre : Bien vu, c'était une erreur de ma part.
 % que l'on cherche à maximiser (pour minimiser $\theta$ si $cos \theta \geq 0$) et à minimiser (pour minimiser $\theta$ si $cos \theta \leq 0$).
 % 2 possibilités: soit l'extremum $z_{extremum}$ trouvé en $z$ est atteignable par $z(x)$, on fait le changement de variable inverse pour retrouver  $x$, sinon on essaie le $x$ qui minimise $z(x) -z_{extremum}$. 
 
-\subsubsection{Preuve géométrique}
+\subsection{Preuve géométrique}
 
 %On s’intéresse au cas où on a un point sur une face d’un cube et un autre sur une face adjacente. On cherche à montrer qu’il existe un chemin entre ces deux points dont l’angle est inférieur ou égal à pi/2. 
 Dans toute la suite, angle désigne l’angle externe. on suppose qu'aucun des deux point A, B n'appartient à l'arête
@@ -176,7 +183,7 @@ ELQ : pourquoi le point $C$ qui minimise la courbure totale de $ACB$ est le poin
 Lysandre : la longeur de ACB et la courbure ne sont pas corrélées, voir figure \ref{fig:contre_ex_1} ou encore la modélisation des courbes respectives : \url{https://www.geogebra.org/calculator/xrwvnuv3}.
 
 
-\subsubsection{preuve finale}
+\subsection{piste initiale}
 
 Soit un cube de côté de longueur $c$, et soit $A$, $B$ deux points de ce cube tels que d$(A, B) < \delta$ avec $\delta < c$ fixé.
 On distingue ainsi trois configurations possibles :
