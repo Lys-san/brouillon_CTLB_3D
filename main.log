@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.8)  14 JAN 2025 15:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2025.1.8)  15 JAN 2025 10:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -645,24 +645,24 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 61.
-LaTeX Font Info:    ... okay on input line 61.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
+LaTeX Font Info:    ... okay on input line 64.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -717,28 +717,28 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (/usr/local/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-Package hyperref Info: Link coloring ON on input line 61.
+Package hyperref Info: Link coloring ON on input line 64.
  (./main.out) (./main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 70.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 67.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 70.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 <al_kashi.png, id=39, 555.07375pt x 556.0775pt>
 File: al_kashi.png Graphic file (type png)
 <use al_kashi.png>
-Package pdftex.def Info: al_kashi.png  used on input line 90.
+Package pdftex.def Info: al_kashi.png  used on input line 93.
 (pdftex.def)             Requested size: 133.07489pt x 133.31708pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 95--97
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
@@ -747,26 +747,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 95--97
 [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./al_kashi.png>]
-Overfull \hbox (1606.14473pt too wide) detected at line 133
+Overfull \hbox (1626.14473pt too wide) detected at line 137
 \OML/cmm/m/it/10 z[] \OT1/cmr/m/n/10 = [] [] [] [][] + []
  []
 
 
-Overfull \hbox (0.82864pt too wide) in paragraph at lines 151--152
+Overfull \hbox (0.82864pt too wide) in paragraph at lines 156--157
 \OT1/cmr/m/n/10 Dans toute la suite, an-gle d^^Sesigne l'angle ex-terne. on sup-pose qu'aucun des deux point A, B n'appartient
  []
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 157.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 162.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 161.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 166.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 161.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 166.
 
 
-LaTeX Warning: Command \textquoteright invalid in math mode on input line 161.
+LaTeX Warning: Command \textquoteright invalid in math mode on input line 166.
 
 
 
@@ -775,19 +775,19 @@ LaTeX Warning: Command \textquoteright invalid in math mode on input line 161.
 [3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 [4]
-Overfull \hbox (15.59102pt too wide) detected at line 283
+Overfull \hbox (15.59102pt too wide) detected at line 288
 []
  []
 
 <contre_ex_0.png, id=100, 571.13374pt x 484.81125pt>
 File: contre_ex_0.png Graphic file (type png)
 <use contre_ex_0.png>
-Package pdftex.def Info: contre_ex_0.png  used on input line 295.
+Package pdftex.def Info: contre_ex_0.png  used on input line 300.
 (pdftex.def)             Requested size: 133.07489pt x 112.96156pt.
 <contre_ex_1.png, id=102, 718.685pt x 777.90625pt>
 File: contre_ex_1.png Graphic file (type png)
 <use contre_ex_1.png>
-Package pdftex.def Info: contre_ex_1.png  used on input line 305.
+Package pdftex.def Info: contre_ex_1.png  used on input line 310.
 (pdftex.def)             Requested size: 221.78923pt x 240.06828pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -795,7 +795,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <contre_ex_2.png, id=104, 972.63374pt x 753.81625pt>
 File: contre_ex_2.png Graphic file (type png)
 <use contre_ex_2.png>
-Package pdftex.def Info: contre_ex_2.png  used on input line 315.
+Package pdftex.def Info: contre_ex_2.png  used on input line 320.
 (pdftex.def)             Requested size: 221.78923pt x 171.89029pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -815,15 +815,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 0A846AE5E452729F75CFA03EFF61833A;1151.
  ) 
 Here is how much of TeX's memory you used:
- 25025 strings out of 473250
- 466919 string characters out of 5717905
- 882966 words of memory out of 5000000
- 47795 multiletter control sequences out of 15000+600000
+ 25033 strings out of 473250
+ 467046 string characters out of 5717905
+ 885168 words of memory out of 5000000
+ 47803 multiletter control sequences out of 15000+600000
  566588 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  104i,14n,115p,1326b,1103s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (7 pages, 417635 bytes).
+Output written on main.pdf (7 pages, 417904 bytes).
 PDF statistics:
  204 PDF objects out of 1000 (max. 8388607)
  153 compressed objects within 2 object streams

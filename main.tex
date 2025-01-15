@@ -23,6 +23,9 @@
 \newcounter{mydef}[section]\setcounter{mydef}{0}
 \renewcommand{\themydef}{\arabic{section}.\arabic{mydef}}
 
+\definecolor{newtext}{HTML}{c0edad}
+\newenvironment{new}{\begin{mdframed}[linewidth=0pt,backgroundcolor=newtext]}{\end{mdframed}}
+
 \newenvironment{definition}[2][]{%
     \refstepcounter{mydef}
  
@@ -121,6 +124,7 @@ Le dénominateur était positif car produit de fonctions positives, on se restre
 On a $u'(z_C) = 4z_C - 2z_A - 2z_B$ linéaire et croissante sur $\mathbb{R}$, $u$ est donc convexe sur $\mathbb{R}$ et donc sur $[z_A, z_B]$.\\
 Ainsi, \underline{pour tout $z_C \in [z_A, z_B]$, $f(z_C) \leq 0$, et donc $\theta \leq \frac{\pi}{2}$}.
 
+\begin{new}
 \subsubsection{recherche de minimum}
  En reprenant $f$ comme défini précédemment, on a : 
 \begin{align*}
@@ -132,6 +136,7 @@ Ainsi, \underline{pour tout $z_C \in [z_A, z_B]$, $f(z_C) \leq 0$, et donc $\the
 La racine réelle de $f'$ est :
 $$z_C = \frac{1}{3} \left( \frac{3 \left( x_B^2 z_A + y_A^2 z_B \right)^2}{\left( x_B^2 + y_A^2 \right)^2} - \frac{3 y_A^2 z_B^2 + \left( 2 y_A^2 + 3 z_A^2 \right) x_B^2}{x_B^2 + y_A^2} \right) \Bigg/ \left( \frac{1}{6} \sqrt{ \frac{32}{3} x_B^4 y_A^2 + \frac{32}{3} x_B^2 y_A^4 + 9 z_A^6 - 54 z_A z_B^5 + 9 z_B^6 + 18 \left( x_B^2 + y_A^2 \right) z_A^4 + 9 \left( 2 x_B^2 + 2 y_A^2 + 15 z_A^2 \right) z_B^4 - 36 \left( 5 z_A^3 + 2 \left( x_B^2 + y_A^2 \right) z_A \right) z_B^3 + 3 \left( 3 x_B^4 + 10 x_B^2 y_A^2 + 3 y_A^4 \right) z_A^2 + 3 \left( 3 x_B^4 + 10 x_B^2 y_A^2 + 3 y_A^4 + 45 z_A^4 + 36 \left( x_B^2 + y_A^2 \right) z_A^2 \right) z_B^2 - 6 \left( 9 z_A^5 + 12 \left( x_B^2 + y_A^2 \right) z_A^3 + \left( 3 x_B^4 + 10 x_B^2 y_A^2 + 3 y_A^4 \right) z_A \right) z_B } \frac{x_B^2 y_A^2}{\left( x_B^2 + y_A^2 \right)^2} + \frac{\left( x_B^2 z_A + y_A^2 z_B \right)^3}{\left( x_B^2 + y_A^2 \right)^3} - \frac{1}{2} \frac{3 y_A^2 z_B^2 + \left( 2 y_A^2 + 3 z_A^2 \right) x_B^2}{x_B^2 + y_A^2} \cdot \frac{ \left( x_B^2 z_A + y_A^2 z_B \right)}{\left( x_B^2 + y_A^2 \right)^2} + \frac{1}{2} \frac{y_A^2 z_B^3 + \left( y_A^2 \left( z_A + z_B \right) + z_A^3 \right) x_B^2}{x_B^2 + y_A^2} \right)^{\frac{1}{3}} + \frac{x_B^2 z_A + y_A^2 z_B}{x_B^2 + y_A^2}$$
 
+\end{new}
 % avec 
 % \begin{align*}
 %     d &= AB,\\
